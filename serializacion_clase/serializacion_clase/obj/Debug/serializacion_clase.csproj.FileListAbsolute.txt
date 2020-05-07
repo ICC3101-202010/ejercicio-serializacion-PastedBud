@@ -1,0 +1,6 @@
+/Users/Carlo/Desktop/ejercicio-serializacion-PastedBud/serializacion_clase/serializacion_clase/bin/Debug/serializacion_clase.exe
+/Users/Carlo/Desktop/ejercicio-serializacion-PastedBud/serializacion_clase/serializacion_clase/bin/Debug/serializacion_clase.pdb
+/Users/Carlo/Desktop/ejercicio-serializacion-PastedBud/serializacion_clase/serializacion_clase/obj/Debug/serializacion_clase.csprojAssemblyReference.cache
+/Users/Carlo/Desktop/ejercicio-serializacion-PastedBud/serializacion_clase/serializacion_clase/obj/Debug/serializacion_clase.csproj.CoreCompileInputs.cache
+/Users/Carlo/Desktop/ejercicio-serializacion-PastedBud/serializacion_clase/serializacion_clase/obj/Debug/serializacion_clase.exe
+/Users/Carlo/Desktop/ejercicio-serializacion-PastedBud/serializacion_clase/serializacion_clase/obj/Debug/serializacion_clase.pdb
