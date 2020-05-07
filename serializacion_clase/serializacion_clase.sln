@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "serializacion_clase", "serializacion_clase\serializacion_clase.csproj", "{1F8C7068-51EB-4397-A51C-52ABDAFD8E6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F8C7068-51EB-4397-A51C-52ABDAFD8E6E}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{1F8C7068-51EB-4397-A51C-52ABDAFD8E6E}.Debug|anycpu.Build.0 = Debug|anycpu
+		{1F8C7068-51EB-4397-A51C-52ABDAFD8E6E}.Release|anycpu.ActiveCfg = Release|anycpu
+		{1F8C7068-51EB-4397-A51C-52ABDAFD8E6E}.Release|anycpu.Build.0 = Release|anycpu
+	EndGlobalSection
+EndGlobal
