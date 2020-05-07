@@ -20,5 +20,11 @@ namespace serializacion_clase
             this.edad = edad;
             
         }
+
+        public string Info_Personas()
+        {
+            string a = "Nombre: " + Nombre + ", Apellido: " + Apellido + ", Edad: " + Edad;
+            return a;
+        }
     }
 }

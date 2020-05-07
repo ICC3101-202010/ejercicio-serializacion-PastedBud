@@ -16,58 +16,64 @@ namespace serializacion_clase
         //Finalmente para probar pueden hacer una minì app de consola, donde puedan crear personas, que les muestre todas las personas registradas y salirse.
         //Eso si al volver a meterse y ver la lista que esten las personas registradas anteriormente
 
-        public List<Person>personas;
 
-        public void almacenar()
+        public static void Main(string[] args)
         {
-            Person person = new Person();
-            Console.WriteLine("Introduzca Nombre");
-            string Nombre = Console.ReadLine();
-            person.Nombre = Nombre;
-            Console.WriteLine("Introduzca Apellido");
-            string Apellido = Console.ReadLine();
-            person.Apellido = Apellido;
-            Console.WriteLine("Introduzca Edad");
-            int Edad = Convert.ToInt32(Console.ReadLine());
-            person.Edad = Edad;
-            personas.Add(person);
-            IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
-            formatter.Serialize(stream, person);
-            stream.Close();
-        }
-
-        public void cargar()
-        {
-            IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            Person person = (Person)formatter.Deserialize(stream);
-            stream.Close();
-
-            // Here's the proof.  
-            Console.WriteLine("Nombre: {0}", person.Nombre);
-            Console.WriteLine("Apellido: {0}", person.Apellido);
-            Console.WriteLine("Edas: {0}", person.Edad);
-        }
 
 
-        public static void Main(string[] args, List<Person> personas)
-        {
-            Console.WriteLine("Desea 1 -crear nueva persona");
-            Console.WriteLine("      2 -cargar personas existentes");
-            Console.WriteLine("      3 -Salir");
-            int a = Convert.ToInt32(Console.ReadLine());
 
-            while (a != 3)
+            int a = 0;
+
+            List<Person> personas = new List<Person>();
+            while (a != 4)
             {
+                Console.WriteLine("Desea 1 -crear nueva persona");
+                Console.WriteLine("      2 -cargar personas existentes");
+                Console.WriteLine("      3 -para mostrar lista de personas");
+                Console.WriteLine("      4 -Salir");
+                a = Convert.ToInt32(Console.ReadLine());
+
                 if (a == 1)
                 {
-                    almacenar();
+                    Person person = new Person();
+                    Console.WriteLine("Introduzca Nombre");
+                    string Nombre = Console.ReadLine();
+                    person.Nombre = Nombre;
+                    Console.WriteLine("Introduzca Apellido");
+                    string Apellido = Console.ReadLine();
+                    person.Apellido = Apellido;
+                    Console.WriteLine("Introduzca Edad");
+                    int Edad = Convert.ToInt32(Console.ReadLine());
+                    person.Edad = Edad;
+                    personas.Add(person);
+                    IFormatter formatter = new BinaryFormatter();
+                    Stream stream = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                    formatter.Serialize(stream, person);
+                    stream.Close();
+
+
                 }
                 if (a == 2)
                 {
-                    Console.WriteLine(List < Person > personas);
+                    IFormatter formatter = new BinaryFormatter();
+                    Stream stream = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+                    Person person = (Person)formatter.Deserialize(stream);
+                    stream.Close();
+
+                    // Here's the proof.  
+                    Console.WriteLine("Nombre: {0}", person.Nombre);
+                    Console.WriteLine("Apellido: {0}", person.Apellido);
+                    Console.WriteLine("Edas: {0}", person.Edad);
                 }
+                if (a == 3)
+                {
+                    foreach (var item in personas)
+                    {
+                        Console.WriteLine(item.Info_Personas());
+                    }
+                }
+
+
             }
             
         }
